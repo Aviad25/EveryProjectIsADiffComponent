@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+//13.1 exercise
 
 function FavoriteColor() {
   const [favoriteColor, setFavoriteColor] = useState('blue');
