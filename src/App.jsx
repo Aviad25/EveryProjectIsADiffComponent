@@ -1,7 +1,6 @@
 //import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
-import './App.css'
 //import BoxAnimation from './components/BoxAnimation13.2';
 //import { useEffect } from "react";
 //import FavoriteColor from './components/FavoriteColor';
@@ -43,13 +42,12 @@ const App = () => {
 };
 */
 //import { useState,useEffect } from 'react';
-import React from 'react';
-import './App.css'
+
 
 //13.3
 
 
-
+/*
 
 import { useState, useEffect } from 'react';
 
@@ -88,10 +86,31 @@ const App = () => {
 
 
 
+*/
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './components/youTubePlayer10.1';
+import BlogPost from './components/BlogPost10.1';
+import data from './data10.1.json';
+import './App.css';
+function App() {
+  return (
+    <div className="App">
+      <div>
+        <Link to="/">
+          <h1>React Blog</h1>
+        </Link>
+      </div>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home data={data} />} />
+          <Route path="/BlogPost10.1/:id" element={<BlogPost data={data}/>} />
+        </Routes>
+      </main>
+    </div>
+  );
+}
+export default App;
 
-
-
-export default App
 
 
 
